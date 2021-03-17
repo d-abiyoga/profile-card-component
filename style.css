@@ -1,0 +1,132 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--dark-cyan);
+    background-image: url('images/bg-pattern-bottom.svg'), url('images/bg-pattern-top.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left 50vw top 50vh, right 50vw top -50vh;    
+}
+
+/* Declare CSS variables */
+:root {
+    /* Color variable */
+    --dark-cyan: hsl(185, 75%, 39%);
+    --desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+
+    /* Color which not mentioned in style guide*/
+    --lighter-gray: hsl(0, 0%, 87%);
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+p {
+    color: var(--dark-gray);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    /* Centering the container to viewport */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    
+    background-color: white;
+    box-shadow: 0 0 5px var(--dark-gray);
+    border-radius: 1rem;
+
+    min-width: 21.875rem; /* 350px */
+    max-width: 21.875rem; /* 350px */
+
+    /* for development */
+    min-height: 23.4375rem; /* 375px */
+}
+
+.card-body {
+    border-bottom: solid 1px var(--lighter-gray);
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+    height: 285px; 
+}
+
+.card-bg-wrapper {
+    width: 100%;
+    height: 140px;
+
+    background-image: url('/images/bg-pattern-card.svg');
+    background-size: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.image-wrapper {
+    /* NEED TO BE CHECKED */
+    height: 70px;
+}
+
+.profile-picture {
+    display: block;
+    border-radius: 50%;
+    border: solid 0.4rem white;
+    position: relative;
+    margin: auto;
+    bottom: 50px;
+}
+
+.name-age-container {
+    margin-bottom: 0.8rem;
+}
+
+.name-age-container span {
+    margin-left: 0.5rem;
+    color: var(--dark-grayish-blue);
+    font-weight: lighter;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-evenly;
+    vertical-align: middle;
+    height: 90px;
+    
+    /* NOT SURE IF THIS IS BEST OPTION */
+    padding-top: 25px;
+}
+
+.stats-name {
+    margin-top: 0.4rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+}
+
+.attribution { 
+    margin-top: 0.5rem;
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
